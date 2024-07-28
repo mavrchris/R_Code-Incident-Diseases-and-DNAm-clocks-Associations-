@@ -291,7 +291,7 @@ for (i in unique(as.character(plot_df_all_4$dis))) {
     # Add disease name and n_case to the title #
     ggtitle(paste(i, ",  n_case:", ncase)) +  
     scale_shape_manual(values = c("non-significant" = 16, "significant" = 22, "Bonf.-significant" = 24),
-                       labels = c("non-significant" = expression("P-Non-Significant  ">=" 0.05"), "significant" = "P-Nominal < 0.05", "Bonf.-significant" = expression("P-Bonferroni < " ~ 1.67 %*% 10^-24))) +
+                       labels = c("non-significant" = expression("P-Non-Significant  ">=" 0.05"), "significant" = "P-Nominal < 0.05", "Bonf.-significant" = expression("P-Bonferroni < " ~ 1.67 %*% 10^-4))) +
     theme(
       plot.title = element_text(hjust = 0.08, size= 11),
       axis.text.y = element_blank(),   # Remove y-axis text labels (which are x-axis labels after CORD-FLIP) #
